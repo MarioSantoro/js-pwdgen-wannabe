@@ -9,13 +9,13 @@ function generate(){
     let chars = "0bc1qk55vk7wjgzg3pmxlh59rv5dlgewd9jem5nrt4w!@#$%^&*()ABCDEFGHIJKLMNOPQRSTUVWXYZ";
     let passwordLength ;
     passwordLength = document.getElementById("lenghtPass").value;
-    const charactersLength = chars.length;
     for(let i=0; i <= passwordLength; i++){
-        result += chars.charAt(Math.floor(Math.random() * charactersLength));
+        let randomNumber = Math.floor(Math.random() * chars.length);
+        result += chars.substring(randomNumber , randomNumber + 1);
      }
 
      document.getElementById("suggpass").innerHTML = result;
-     document.getElementById("add").innerHTML = "Genera una nuova password"
+     document.getElementById("add").innerHTML = "Genera una nuova password";
 }
 
 
